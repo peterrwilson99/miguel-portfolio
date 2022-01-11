@@ -19,31 +19,36 @@ body {
 	}
 }
 
+section{
+    margin: 3rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
 /*Nav bar styles*/
 
 .nav-wrapper{ /*move momo makeup to the top right */
     display: flex;
     justify-content: space-between;
-    padding: 38px;
+    padding: 1.5rem;
 }
 
  .right-side{ /*Align the pages to the top right*/
     display: flex;
-    position: relative;
-    top: 45px;
-    left: 1050px;
     justify-content: space-between;
-    font-size: large;
+    align-items: center;
 } 
 
 .nav-wrapper > .right-side > div { /*go in nav-wrapper, inside right-side to the div in there*/
     margin-right: 20px;
-    font-size: 0.8em;
     color: black;
 }
 
 .nav-link-wrapper { /*add border below links*/
-    height: 18px;
+    padding: 0.5rem;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
 }
@@ -73,30 +78,24 @@ body {
 
 .left-side{ /*Align header in top left*/
     display: flex;
-    position: relative;
-    right: 950px;
-
     color:rgb(0, 49, 114);
 }
 
+.left-side:hover{ /*Align header in top left*/
+    cursor: pointer;
+}
+
 .small-header{
-    position: relative;
-    right: 195px;
-    top: 20px;
     font-size: small;
     color: black;
 }
 
 .border-top { /*Add border between headers and page*/
     position: relative;
-    top: 3px;
-    bottom: 15px;
     border-bottom: 2px solid rgb(170, 21, 11);
 }
 
 .border-bottom {
-    margin-top: 40px;
-    margin-bottom: 50px;
     border-top: 2px solid rgb(170, 21, 11);
 }
 
@@ -104,36 +103,73 @@ body {
     text-align: center;;
 }
 
-.social-Img {
-    padding-right: 10px;
-    margin-top: 30px;
-    margin-bottom: 40px;
+
+/* ID based css */
+
+#links-flex{
+    display: flex;
+    margin: auto;
+    width: min(90%,700px);
+    justify-content: space-between;
 }
 
+@media only screen and (max-width: 600px) {
+
+    #page-header{
+        display: block !important;
+        text-align: center;
+        height: auto;
+    }
+
+    .bio-titles{
+        padding: 2rem;
+    }
+
+    #links-flex{
+      display: block;
+    }
+    .link-item{
+        margin: auto;
+    }
+
+}
+
+
+.link-item{
+    padding: 1rem;
+    width: min(40%,300px);
+    text-align: center;
+}
+
+
+
 /* utility stuff */
+
+.d-flex{
+    display: flex;
+}
 
 #page-header{
     display:grid;
     grid-template-columns: 1fr 1.25fr;
     padding: 1rem;
-    background-image: url("header-bg.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/header-bg.jpg");
+    /* background-image: url("images/header-bg.jpg"); */
     background-position: center;
     background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     position: relative;
-    top: 55px;
-    width: 1350px;
+    width: min(100%,1350px);
     height: 350px;
     color:white;
 }
 
-.container-md {
+.bio-titles {
     margin: auto;
 }
 
 .mini-bio {
-    width: 50%;
+    width: 75%;
     margin: auto;
     text-align: center;
 }
@@ -142,11 +178,6 @@ body {
     padding: 0.5rem;
 }
 
-#button-section{
-    margin-top: 90px;
-    margin-left: 210px;
-
-}
 
 .btn{
     padding: 0.5rem;
@@ -154,14 +185,12 @@ body {
     background-position: center;
     color: white;
     border-radius: 4px;
-    margin-top: 30px;
-    margin-left: 25px;
-    margin-bottom: 10px;
-    width: 185px;
+    padding-left: 3rem;
+    padding-right: 3rem;
     height: 40px
 }
 
-#smalltext{
+.smalltext{
     font-size: small;
 }
 
@@ -179,9 +208,7 @@ body {
     width: 1385px;
     height: 660px;
     position: relative;
-    left: 30px;
-    top: 30px;
-    right: 30px;
+    margin: auto;
     background-image: linear-gradient(to bottom,#EEEEEE, #123C69);
 }
 

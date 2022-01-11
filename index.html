@@ -12,12 +12,21 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" id="toolbar">
         <div class="nav-wrapper">
+
+            <div class="left-side">
+                <div onclick="location.href='index.html';">
+                    <h3>MIGUEL MANGUERRA</h3>
+                    <p class="small-Header">Third Year Computer Engineering Student</p>
+                </div>
+
+            </div>
+
             <div class="right-side">
 
                 <div class="nav-link-wrapper active-nav-link">
-                    <a href="index.HTML">Home</a>
+                    <a href="index.html">Home</a>
                 </div>
 
                 <div class="nav-link-wrapper">
@@ -31,25 +40,17 @@
                 <div class="nav-link-wrapper">
                     <a href="contact.html">Contact Me</a>
                 </div>
-            </div>
-
-            <div class="left-side">
-                <div class="mig-Header">
-                    <h3>MIGUEL MANGUERRA<br></h3>
-                </div>
                 
-                <div class="small-Header">
-                    <p><br>Third Year Computer Engineering Student</p>
-                </div>
             </div>
         </div>
 
-    <div class="border-top">
+        <div class="border-top">
                 
+        </div>
     </div>
 
     <section id="page-header">
-        <div class="container-md">
+        <div class="bio-titles">
             <h1>
                 Miguel Manguerra
             </h1>
@@ -63,30 +64,34 @@
 
         <div class="mini-bio">
             <div class="p-sm">
-                My name is Miguel and I am currently a 3rd year computer engineering student at the University of Victoria. I am an avid competitive PC gamer which has led me to explore a career in computer engineering. 
+                My name is Miguel and I am currently a 3rd year computer engineering student at the University of Victoria. 
+                I am an avid competitive PC gamer which has led me to explore a career in computer engineering. 
             </div>
         </div>
     </section>
 
     <section id="button-section">
-        <div>
-            <br>RESUME - <span id="smalltext">You can download my resume in PDF format using the button below. </span>
+
+        <div id="links-flex">
+
+            <div class="link-item">
+                <button type="button" class="btn btn-primary btn-lg">Resume</button>
+                <p>You can download my resume in PDF format using the button below.</p>
+            </div>
+
+            <div class="link-item">
+                <button type="button" class="btn btn-primary btn-lg"><a href="https://www.linkedin.com/in/miguelmanguerra/">LinkedIn</a></button>
+                <p>You can also view my LinkedIn profile with the button below.</p>
+            </div>
+
         </div>
-        <div>
-            <button type="button" class="btn btn-primary btn-lg">Download my Resume</button>
-        </div>
-        <div>
-            <br>LINKEDIN - <span id="smalltext">You can also view my LinkedIn profile with the button below. </span>
-        </div>
-        <div>
-            <button type="button" class="btn btn-primary btn-lg">My LinkedIn Profile</button>
-        </div>
+
     </section>    
 
     <div class="content-wrapper"> 
         <div class="two-column-wrapper">
             <div class="image-wrapper">
-                <img src="migoy.jpg">
+                <img src="images/migoy.jpg">
             </div>
             <div class="profile-content-wrapper">
                 <div class="p-sm">
@@ -125,8 +130,8 @@
     <div class="socials">
         <h2 style="color: #123C69"> Miguel Manguerra</h2>
         <div class="social-Img">
-            <img style="padding-right: 12px" src="facebook.png">
-            <img src="instagram.png">
+            <img style="padding-right: 12px" src="images/facebook.png">
+            <img src="images/instagram.png">
         </div>
     </div>
 
