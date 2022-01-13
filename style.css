@@ -2,17 +2,260 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.25s;
+    background-color: 	#EEEEEE;
 }
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+section{
+    margin: 3rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+/*Nav bar styles*/
+
+.nav-wrapper{ /*move momo makeup to the top right */
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+ .right-side{ /*Align the pages to the top right*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.nav-wrapper > .right-side > div { /*go in nav-wrapper, inside right-side to the div in there*/
+    margin-right: 20px;
+    color: black;
+}
+
+.nav-link-wrapper { /*add border below links*/
+    padding: 0.5rem;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {  /*Make words grey & fade colour */
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1ps solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+.left-side{ /*Align header in top left*/
+    display: flex;
+    color:rgb(0, 49, 114);
+}
+
+.left-side:hover{ /*Align header in top left*/
+    cursor: pointer;
+}
+
+.small-header{
+    font-size: small;
+    color: black;
+}
+
+.border-top { /*Add border between headers and page*/
+    position: relative;
+    border-bottom: 2px solid rgb(170, 21, 11);
+}
+
+.border-bottom {
+    border-top: 2px solid rgb(170, 21, 11);
+}
+
+.socials {
+    text-align: center;;
+}
+
+
+/* ID based css */
+
+#links-flex{
+    display: flex;
+    margin: auto;
+    width: min(90%,700px);
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #page-header{
+        display: block !important;
+        text-align: center;
+        height: auto;
+    }
+
+    .bio-titles{
+        padding: 2rem;
+    }
+
+    #links-flex{
+      display: block;
+    }
+    .link-item{
+        margin: auto;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .two-column-wrapper{
+        display: block !important;
+        height: 1050px !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .two-column-wrapper{
+        height: 1200px !important;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+
+    .two-column-wrapper{
+        height: 1500px !important;
+    }
+}
+
+
+.link-item{
+    padding: 1rem;
+    width: min(40%,300px);
+    text-align: center;
+}
+
+
 
 /* utility stuff */
 
-.container-md {
-    text-align: center;
-    max-width: 960px;
+.d-flex{
+    display: flex;
+}
+
+#page-header{
+    display:grid;
+    grid-template-columns: 1fr 1.25fr;
+    padding: 1rem;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/header-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-inline: auto;
+    position: relative;
+    width: min(100%,1350px);
+    height: 350px;
+    color:white;
+}
+
+.bio-titles {
     margin: auto;
+}
+
+.mini-bio {
+    width: 75%;
+    margin: auto;
+    text-align: center;
 }
 
 .p-sm{
     padding: 0.5rem;
 }
 
+
+.btn{
+    padding: 0.5rem;
+    background-color: #123C69;
+    background-position: center;
+    color: white;
+    border-radius: 4px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 40px
+}
+
+.smalltext{
+    font-size: small;
+}
+
+.content-wrapper{
+    padding: 30px;
+    position: relative;
+    
+}
+
+.two-column-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1.25fr;
+    background-color:rgb(229, 239, 241);
+    color: rgb(0, 49, 114);
+    width: min(90%,1385px);
+    height: 100%;
+    margin: auto;
+    background-image: linear-gradient(to bottom,#EEEEEE, #123C69);
+}
+
+.image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper img{
+    width: min(90%,500px);   
+}
+
+.profile-content-wrapper{
+    text-align: center;
+    margin: auto;
+    color: black;
+}
+
+.teacher-note {
+    width: 40%;
+    font-size: larger;
+    margin: auto;
+    border: 3px solid #123C69;
+    padding: 15px;
+    margin-top: 5%;
+	
+}
+
+.teacher-note:hover{
+    text-decoration-color: white;
+}
