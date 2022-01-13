@@ -28,6 +28,14 @@ a {
     text-decoration: none;
   }
 
+
+/* Utility Class */
+
+.p-2rem{
+    padding: 2rem;
+}
+
+
 /*Nav bar styles*/
 
 .nav-wrapper{ /*move momo makeup to the top right */
@@ -113,44 +121,29 @@ a {
     justify-content: space-between;
 }
 
+/* Phone Layouts */
+
 @media only screen and (max-width: 600px) {
 
     #page-header{
         display: block !important;
         text-align: center;
-        height: auto;
+        height: inherit !important;
+        width: 90% !important;
     }
 
     .bio-titles{
         padding: 2rem;
     }
 
-    #links-flex{
-      display: block;
+    .left-side{
+        display: none;
     }
-    .link-item{
-        margin: auto;
-    }
-
 }
 
 @media only screen and (max-width: 1200px) {
     .two-column-wrapper{
         display: block !important;
-        height: 1050px !important;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .two-column-wrapper{
-        height: 1200px !important;
-    }
-}
-
-@media only screen and (max-width: 470px) {
-
-    .two-column-wrapper{
-        height: 1500px !important;
     }
 }
 
@@ -204,8 +197,6 @@ a {
     background-position: center;
     color: white;
     border-radius: 4px;
-    padding-left: 3rem;
-    padding-right: 3rem;
     height: 40px
 }
 
@@ -214,20 +205,17 @@ a {
 }
 
 .content-wrapper{
-    padding: 30px;
-    position: relative;
-    
+    margin: auto;
 }
 
 .two-column-wrapper{
     display:grid;
     grid-template-columns: 1fr 1.25fr;
     background-color:rgb(229, 239, 241);
-    color: rgb(0, 49, 114);
-    width: min(90%,1385px);
-    height: 100%;
+    width: min(100%,1385px);
+    height: inherit;
     margin: auto;
-    background-image: linear-gradient(to bottom,#EEEEEE, #123C69);
+    background-image: linear-gradient(to bottom,#EEEEEE, #4883c3);
 }
 
 .image-wrapper{
@@ -247,7 +235,7 @@ a {
 }
 
 .teacher-note {
-    width: 40%;
+    width: min(80%,700px);
     font-size: larger;
     margin: auto;
     border: 3px solid #123C69;
